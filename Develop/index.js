@@ -3,52 +3,52 @@
 // TODO: Create an array of questions for user input
 const fs = require("fs");
 const inquirer = require("inquirer");
-const generateREADME = require('./utils/generateMarkdown')
+const generateREADME = require("./utils/generateMarkdown");
 
-inquirer
-  .prompt([
+const promptUser = () => {
+  return inquirer.prompt([
     {
       name: "Github username (Require)",
       type: "input",
       message: "What is your Github username?",
-      validate: nameInput => {
+      validate: (nameInput) => {
         if (nameInput) {
           return true;
         } else {
-          console.log('Please enter your Github name!');
+          console.log("Please enter your Github name!");
           return false;
         }
-      }
+      },
     },
-    },
+
     {
       name: "Contact",
       type: "input",
       message: "What is your email address? (Require)",
-      validate: nameInput => {
+      validate: (nameInput) => {
         if (nameInput) {
           return true;
         } else {
-          console.log('Please enter your email address!');
+          console.log("Please enter your email address!");
           return false;
         }
-      }
+      },
     },
-    },
+
     {
       name: "Project",
       type: "input",
       message: "What is your Project's name?(Require)",
-      validate: nameInput => {
+      validate: (nameInput) => {
         if (nameInput) {
           return true;
         } else {
-          console.log('Please enter your Project name!');
+          console.log("Please enter your Project name!");
           return false;
         }
-      }
+      },
     },
-    },
+
     {
       name: "Description",
       type: "input",
@@ -91,12 +91,10 @@ inquirer
       message:
         "What does the user need to know about contributing to the repo?",
     },
-  ]).then(())
-  
-  });
+  ]);
+};
 
 // TODO: Create a function to write README file
-
 
 // TODO: Create a function to initialize app
 function init() {}
