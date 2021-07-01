@@ -4,7 +4,7 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 const { userInfo } = require("os");
-const generateMarkdown = require("./utils/generateMarkdown");
+const generateMarkdown = require("./util/generateMarkdown");
 const writeFileAsync = util.promisify(writeToFile);
 
 const questions = [

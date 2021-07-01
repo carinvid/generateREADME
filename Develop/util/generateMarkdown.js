@@ -27,7 +27,7 @@ function generateMarkdown(userResponses, userInfo) {
   
   ## Description 
   
-  *The what, why, and how:* 
+  *The What, Why, and How:* 
   
   ${userResponses.description}
   `;
@@ -85,7 +85,7 @@ function generateMarkdown(userResponses, userInfo) {
       ${userResponses.license}
       `;
 
-  let draftDev = `
+  let draftoDeveloper = `
       ---
       
       ## Questions?
