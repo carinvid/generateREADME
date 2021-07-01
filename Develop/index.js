@@ -38,16 +38,30 @@ const questions = [
   },
 
   {
-    name: "Project",
+    name: "Repo",
     type: "input",
-    message: "What is your Project's name?(Require)",
-    validate: (nameInput) => {
-      if (nameInput) {
+    message: "What is name of your Repo?(Require)",
+    default: "README Generator",
+    validate: (answer) => {
+      if (answer.length < 1) {
         return true;
       } else {
-        console.log("Please enter your Project name!");
+        console.log("Please enter the name of your repo!");
         return false;
       }
+    },
+  },
+
+  {
+    type: "input",
+    message: "What is the title of your project?",
+    name: "title",
+    default: "Project Title",
+    validate: function (answer) {
+      if (answer.length < 1) {
+        return console.log("A valid project title is required.");
+      }
+      return true;
     },
   },
 
@@ -75,8 +89,8 @@ const questions = [
       "GNU General Public License family",
       "No license",
     ],
-    validate: (nameInput) => {
-      if (nameInput) {
+    validate: (answer) => {
+      if (answer.length < 1) {
         return true;
       } else {
         console.log("Please choice the type of your license!");
