@@ -99,7 +99,7 @@ function generateMarkdown(userResponses, userInfo) {
 
   // If GitHub email is not null, add to Developer section
   if (userInfo.email !== null) {
-    draftDev += `
+    draftoDeveloper += `
       Email: ${userInfo.email}
       `;
   }

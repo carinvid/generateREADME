@@ -4,14 +4,15 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 const { userInfo } = require("os");
-const generateMarkdown = require("./util/generateMarkdown");
+const util = require("util");
+const generateMarkdown = require("./utils/generateMarkdown");
 const writeFileAsync = util.promisify(writeToFile);
 
 const questions = [
   {
-    name: "Github username (Require)",
+    name: "username",
     type: "input",
-    message: "What is your Github username?",
+    message: "What is your Github username? (Require)",
     validate: (nameInput) => {
       if (nameInput) {
         return true;
@@ -53,26 +54,18 @@ const questions = [
   {
     name: "Description",
     type: "input",
-    message: "Please write a short description of your project ",
+    message: "Please write a short description of your project: ",
   },
   {
     name: "Installation",
     type: "input",
     message:
-      "If applicable, describe the steps required to install your project for the Installation section.",
+      "If applicable, describe the steps required to install your project for the Installation section: ",
   },
   {
     name: "License",
     type: "checkbox",
     message: "Please choice the type of your license :(Require)",
-    validate: (nameInput) => {
-      if (nameInput) {
-        return true;
-      } else {
-        console.log("Please choice the type of your license!");
-        return false;
-      }
-    },
     choices: [
       "Apache license 2.0",
       "Boost Software License 1.0",
@@ -82,24 +75,32 @@ const questions = [
       "GNU General Public License family",
       "No license",
     ],
+    validate: (nameInput) => {
+      if (nameInput) {
+        return true;
+      } else {
+        console.log("Please choice the type of your license!");
+        return false;
+      }
+    },
   },
   {
     name: "Usage",
     type: "input",
     message:
-      "Provide instructions and examples of your project in use for the Usage section.",
+      "Provide instructions and examples of your project in use for the Usage section: ",
   },
   {
     name: "Contributing",
     type: "input",
     message:
-      "If applicable, provide guidelines on how other developers can contribute to your project.",
+      "If applicable, provide guidelines on how other developers can contribute to your project: ",
   },
   {
     name: "Tests",
     type: "input",
     message:
-      "If applicable, provide any tests written for your application and provide examples on how to run them.",
+      "If applicable, provide any tests written for your application and provide examples on how to run them: ",
   },
   {
     name: "About the Repo",
@@ -113,16 +114,16 @@ const questions = [
   },
 ];
 
-promptUser().then((promptReadme) => {
-  const generateREADME = data.promptReadme.split("").join("") + ".json";
+// promptUser().then((promptReadme) => {
+//   const generateREADME = data.promptReadme.split("").join("") + ".json";
 
-  fs.writeFile("README.md", JSON, stringify(data, null, "\t"), function (err) {
-    if (err) {
-      return console.log(err);
-    }
-    console.log("Sucess!");
-  });
-});
+//   fs.writeFile("README.md", JSON, stringify(data, null, "\t"), function (err) {
+//     if (err) {
+//       return console.log(err);
+//     }
+//     console.log("Sucess!");
+//   });
+// });
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, data, (err) => {
@@ -145,7 +146,7 @@ async function init() {
     console.log(markdown);
 
     await writeFileAsync("README.md", markdown);
-  } catch (err) {
+  } catch (error) {
     console.log(error);
   }
 }
