@@ -5,6 +5,7 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 const { userInfo } = require("os");
 const util = require("util");
+const api = require("./utils/api.js");
 const generateMarkdown = require("./utils/generateMarkdown");
 const writeFileAsync = util.promisify(writeToFile);
 
@@ -24,7 +25,7 @@ const questions = [
   },
 
   {
-    name: "Contact",
+    name: "contact",
     type: "input",
     message: "What is your email address? (Require)",
     validate: (nameInput) => {
@@ -38,17 +39,15 @@ const questions = [
   },
 
   {
-    name: "Repo",
+    name: "repo",
     type: "input",
     message: "What is name of your Repo?(Require)",
     default: "README Generator",
-    validate: (answer) => {
+    validate: function (answer) {
       if (answer.length < 1) {
-        return true;
-      } else {
-        console.log("Please enter the name of your repo!");
-        return false;
+        return console.log("A valid name of your Repo is required.");
       }
+      return true;
     },
   },
 
@@ -66,18 +65,18 @@ const questions = [
   },
 
   {
-    name: "Description",
+    name: "description",
     type: "input",
     message: "Please write a short description of your project: ",
   },
   {
-    name: "Installation",
+    name: "installation",
     type: "input",
     message:
       "If applicable, describe the steps required to install your project for the Installation section: ",
   },
   {
-    name: "License",
+    name: "license",
     type: "checkbox",
     message: "Please choice the type of your license :(Require)",
     choices: [
@@ -89,40 +88,32 @@ const questions = [
       "GNU General Public License family",
       "No license",
     ],
-    validate: (answer) => {
-      if (answer.length < 1) {
-        return true;
-      } else {
-        console.log("Please choice the type of your license!");
-        return false;
-      }
-    },
   },
   {
-    name: "Usage",
+    name: "usage",
     type: "input",
     message:
       "Provide instructions and examples of your project in use for the Usage section: ",
   },
   {
-    name: "Contributing",
+    name: "contributing",
     type: "input",
     message:
       "If applicable, provide guidelines on how other developers can contribute to your project: ",
   },
   {
-    name: "Tests",
+    name: "tests",
     type: "input",
     message:
       "If applicable, provide any tests written for your application and provide examples on how to run them: ",
   },
   {
-    name: "About the Repo",
+    name: "about the Repo",
     type: "input",
     message: "What does the user need to know about using the rep?",
   },
   {
-    name: "Contribution",
+    name: "contribution",
     type: "input",
     message: "What does the user need to know about contributing to the repo?",
   },
@@ -155,7 +146,11 @@ async function init() {
     console.log("Your responses: ", userResponses);
     console.log("Thank you for your responses");
 
-    console.log("Generating your README...");
+    // Call GitHub api for user info
+    const userInfo = await api.getUser(userResponses);
+    console.log("Your GitHub user info: ", userInfo);
+
+    console.log("Generating your README.md file");
     const markdown = generateMarkdown(userResponses, userInfo);
     console.log(markdown);
 

@@ -1,15 +1,13 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
+
 function generateMarkdown(userResponses, userInfo) {
   let tableofContents = `## Table of Contents`;
 
-  if (userResponses.description !== "") {
-    tableofContents += `* [Description](#description)`;
-  }
   if (userResponses.installation !== "") {
-    tableofContents += `* [Installation](#installation)`;
+    tableofContents += `* [installation](#installation)`;
   }
   if (userResponses.usage !== "") {
-    tableofContents += `* [Usage](#usage)`;
+    tableofContents += `* [usage](#usage)`;
   }
   if (userResponses.contributing !== "") {
     tableofContents += `* [Contributing](#contributing)`;
@@ -18,19 +16,24 @@ function generateMarkdown(userResponses, userInfo) {
     tableofContents += `* [Tests](#tests)`;
   }
 
-  let draftMarkdown = `#${userResponses.title};
+  let draftMarkdown = `# ${userResponses.title};
 
-   
-  ## Description 
+  ![Badge for GitHub repo top language](https://img.shields.io/github/languages/top/${userResponses.username}/${userResponses.repo}?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/${userResponses.username}/${userResponses.repo}?style=flat&logo=appveyor)
   
-  *The What, Why, and How:* 
+  Check out the badges hosted by [shields.io](https://shields.io/).
+   
+  ### Description 
+  
+  *The What, Why, and How:
+  * 
   
   ${userResponses.description}
   `;
 
   draftMarkdown += tableofContents;
 
-  draftMarkdown += `* [License](#license)`;
+  draftMarkdown += `
+  * [License](#license)`;
 
   if (userResponses.installation !== "") {
     draftMarkdown += `
@@ -41,6 +44,7 @@ function generateMarkdown(userResponses, userInfo) {
     
     ${userResponses.installation}`;
   }
+
   if (userResponses.usage !== "") {
     draftMarkdown += `
       
@@ -72,7 +76,6 @@ function generateMarkdown(userResponses, userInfo) {
       
       ${userResponses.tests}`;
   }
-
   // License section is required
   draftMarkdown += `
       
@@ -98,7 +101,6 @@ function generateMarkdown(userResponses, userInfo) {
       Email: ${userInfo.email}
       `;
   }
-
   // Add developer section to markdown
   draftMarkdown += draftoDeveloper;
 
