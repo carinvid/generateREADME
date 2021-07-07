@@ -1,6 +1,6 @@
-# hhdhhfh;
+# How to generate a README.md file;
 
-  ![Badge for GitHub repo top language](https://img.shields.io/github/languages/top/carinvid/README?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/carinvid/README?style=flat&logo=appveyor)
+  ![Badge for GitHub repo top language](https://img.shields.io/github/languages/top/carinvid/README Generator?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/carinvid/README Generator?style=flat&logo=appveyor)
   
   Check out the badges hosted by [shields.io](https://shields.io/).
    
@@ -9,31 +9,31 @@
   *The What, Why, and How:
   * 
   
-  klkj;j;l
-  ## Table of Contents*[Installation](#installation)*[Usage](#usage)*[Contributing](#contributing)*[Tests](#tests)
+  it will create a README.file for you repo
+  ## Table of Contents
   * [License](#license)
     
     ## Installation
     
     *Steps required to install project and how to get the development environment running:*
     
-    jjjj
+    using NPM
       
       ## Usage 
       
       *Instructions and examples for use:*
       
-      hgdahskdh
+      This will be up to the user
       
       ## Tests
       
       *Tests for application and how to run them:*
       
-      fff
+      none
       
       ## License
       
-      Boost Software License 1.0
+      
       
       ---
       

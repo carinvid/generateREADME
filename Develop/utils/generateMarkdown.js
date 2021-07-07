@@ -3,18 +3,18 @@
 function generateMarkdown(userResponses, userInfo) {
   let tableofContents = `## Table of Contents`;
 
-  if (userResponses.installation !== "") {
-    tableofContents += `* [installation](#installation)`;
-  }
-  if (userResponses.usage !== "") {
-    tableofContents += `* [usage](#usage)`;
-  }
-  if (userResponses.contributing !== "") {
-    tableofContents += `* [Contributing](#contributing)`;
-  }
-  if (userResponses.tests !== "") {
-    tableofContents += `* [Tests](#tests)`;
-  }
+  // if (userResponses.installation !== "") {
+  //   tableofContents += `* [installation](#installation)`;
+  // }
+  // if (userResponses.usage !== "") {
+  //   tableofContents += `* [usage](#usage)`;
+  // }
+  // if (userResponses.contributing !== "") {
+  //   tableofContents += `* [Contributing](#contributing)`;
+  // }
+  // if (userResponses.tests !== "") {
+  //   tableofContents += `* [Tests](#tests)`;
+  // }
 
   let draftMarkdown = `# ${userResponses.title};
 
