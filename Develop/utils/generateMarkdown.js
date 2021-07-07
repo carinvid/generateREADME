@@ -1,120 +1,126 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 
 function generateMarkdown(userResponses, userInfo) {
-  let tableofContents = `## Table of Contents`;
+  let tableOfContents = `## Table of Contents`;
 
   if (userResponses.installation !== "") {
-    tableofContents += `
-    * [installation](#installation)`;
+    tableOfContents += `
+  * [Installation](#installation)`;
   }
+
   if (userResponses.usage !== "") {
-    tableofContents += `
-    * [usage](#usage)`;
+    tableOfContents += `
+  * [Usage](#usage)`;
   }
+
   if (userResponses.contributing !== "") {
-    tableofContents += `
-    * [Contributing](#contributing)`;
+    tableOfContents += `
+  * [Contributing](#contributing)`;
   }
+
   if (userResponses.tests !== "") {
-    tableofContents += `
-    * [Tests](#tests)`;
+    tableOfContents += `
+  * [Tests](#tests)`;
   }
 
-  let draftMarkdown = `
-  # ${userResponses.title};
-
+  // Generate markdown for the top required portions of the README
+  let draftoMarkdown = `# ${userResponses.title}
   ![Badge for GitHub repo top language](https://img.shields.io/github/languages/top/${userResponses.username}/${userResponses.repo}?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/${userResponses.username}/${userResponses.repo}?style=flat&logo=appveyor)
   
   Check out the badges hosted by [shields.io](https://shields.io/).
-   
-  ### Description 
   
-  *The What, Why, and How:* 
-
+  
+  ## Description 
+  
+  *The what, why, and how:* 
+  
   ${userResponses.description}
-
   `;
 
-  draftMarkdown += tableofContents;
+  // Add Table of Contents to markdown
+  draftoMarkdown += tableOfContents;
 
-  draftMarkdown += `
-  * [License](#license)
-  `;
+  // Add License section since License is required to Table of Contents
+  draftoMarkdown += `
+  * [License](#license)`;
 
+  // Optional Installation section
   if (userResponses.installation !== "") {
-    draftMarkdown += `
-    
+    draftoMarkdown += `
+  
   ## Installation
-    
-    *Steps required to install project and how to get the development environment running:*
-    
-    ${userResponses.installation}`;
+  
+  *Steps required to install project and how to get the development environment running:*
+  
+  ${userResponses.installation}`;
   }
 
+  // Optional Usage section
   if (userResponses.usage !== "") {
-    draftMarkdown += `
-      
+    draftoMarkdown += `
+  
   ## Usage 
-      
-      *Instructions and examples for use:*
-      
-      ${userResponses.usage}`;
+  
+  *Instructions and examples for use:*
+  
+  ${userResponses.usage}`;
   }
 
   // Optional Contributing section
   if (userResponses.contributing !== "") {
     `
- 
-      
+  
   ## Contributing
-      
-      *If you would like to contribute it, you can follow these guidelines for how to do so.*
-      
-      ${userResponses.contributing}`;
+  
+  *If you would like to contribute it, you can follow these guidelines for how to do so.*
+  
+  ${userResponses.contributing}`;
   }
 
   // Optional Tests section
   if (userResponses.tests !== "") {
-    draftMarkdown += `
-      
+    draftoMarkdown += `
+  
   ## Tests
-      
-      *Tests for application and how to run them:*
-      
-      ${userResponses.tests}`;
+  
+  *Tests for application and how to run them:*
+  
+  ${userResponses.tests}`;
   }
 
   // License section is required
-  draftMarkdown += `
-      
+  draftoMarkdown += `
+  
   ## License
-      
-      ${userResponses.license}
-      `;
+  
+  ${userResponses.license}
+  `;
 
-  let draftoDeveloper = `
-      ---------------------------------
-      
+  // Questions / About Developer section
+  let draftDev = `
+  ---
+  
   ## Questions?
-      
-         
-      For any questions, please contact me with the information below:
-     
-      GitHub: [@${userInfo.login}](${userInfo.url})
-      `;
+  
+  ![Developer Profile Picture](${userInfo.avatar_url}) 
+  
+  For any questions, please contact me with the information below:
+ 
+  GitHub: [@${userInfo.login}](${userInfo.url})
+  `;
 
   // If GitHub email is not null, add to Developer section
   if (userInfo.email !== null) {
-    draftoDeveloper += `
-      Email: ${userInfo.email}
-      `;
+    draftDev += `
+  Email: ${userInfo.email}
+  `;
   }
 
   // Add developer section to markdown
-  draftMarkdown += draftoDeveloper;
+  draftoMarkdown += draftDev;
 
   // Return markdown
-  return draftMarkdown;
+  return draftoMarkdown;
 }
 
 module.exports = generateMarkdown;

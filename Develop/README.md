@@ -1,52 +1,50 @@
-
-  # How to generate a README.md file for your repo;
-
-  ![Badge for GitHub repo top language](https://img.shields.io/github/languages/top/carinvid/README Generator?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/carinvid/README Generator?style=flat&logo=appveyor)
+# How to create a readme.md file
+  ![Badge for GitHub repo top language](https://img.shields.io/github/languages/top/carinvid/README generator?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/carinvid/README generator?style=flat&logo=appveyor)
   
   Check out the badges hosted by [shields.io](https://shields.io/).
-   
-  ### Description 
   
-  *The What, Why, and How:* 
-
-  This is will create a README.md file for your repo
-
+  
+  ## Description 
+  
+  *The what, why, and how:* 
+  
+  This will help you to generate a README.md for your repo
   ## Table of Contents
-    * [installation](#installation)
-    * [usage](#usage)
-    * [Contributing](#contributing)
-    * [Tests](#tests)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Contributing](#contributing)
+  * [Tests](#tests)
   * [License](#license)
   
-    
   ## Installation
-    
-    *Steps required to install project and how to get the development environment running:*
-    
-    NPM install
-      
+  
+  *Steps required to install project and how to get the development environment running:*
+  
+  NMP install
+  
   ## Usage 
-      
-      *Instructions and examples for use:*
-      
-      Node.js and MPN
-      
+  
+  *Instructions and examples for use:*
+  
+  node
+  
   ## Tests
-      
-      *Tests for application and how to run them:*
-      
-      Basic knowledge of Node.js
-      
+  
+  *Tests for application and how to run them:*
+  
+  none
+  
   ## License
-      
-      Apache license 2.0
-      
-      ---------------------------------
-      
+  
+  Mozilla Public License 2.0
+  
+  ---
+  
   ## Questions?
-      
-         
-      For any questions, please contact me with the information below:
-     
-      GitHub: [@carinvid](https://api.github.com/users/carinvid)
-      
+  
+  ![Developer Profile Picture](https://avatars.githubusercontent.com/u/17866063?v=4) 
+  
+  For any questions, please contact me with the information below:
+ 
+  GitHub: [@carinvid](https://api.github.com/users/carinvid)
+  
