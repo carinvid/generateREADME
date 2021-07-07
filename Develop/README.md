@@ -1,4 +1,5 @@
-# How to create a README.md File;
+
+  # How to generate a README.md file for your repo;
 
   ![Badge for GitHub repo top language](https://img.shields.io/github/languages/top/carinvid/README Generator?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/carinvid/README Generator?style=flat&logo=appveyor)
   
@@ -8,29 +9,34 @@
   
   *The What, Why, and How:* 
 
-  How to create a README file for your repo
+  This will generate  file using Node.js
 
   ## Table of Contents
     * [installation](#installation)
     * [usage](#usage)
     * [Contributing](#contributing)
+    * [Tests](#tests)
   * [License](#license)
-  * [installation](#installation)
-  * [usage](#usage)
-  * [Contributing](#contributing)
+ 
   * [Tests](#tests)
     
     ## Installation
     
     *Steps required to install project and how to get the development environment running:*
     
-    NPM install
+    NPM intall
       
       ## Usage 
       
       *Instructions and examples for use:*
       
-      there is no req for this
+      This will be up to the user
+      
+      ## Tests
+      
+      *Tests for application and how to run them:*
+      
+      leave a comment
       
       ## License
       
