@@ -1,5 +1,5 @@
-# How to create a readme.md file
-  ![Badge for GitHub repo top language](https://img.shields.io/github/languages/top/carinvid/README generator?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/carinvid/README generator?style=flat&logo=appveyor)
+# How ro create a README.md file
+  ![Badge for GitHub repo top language](https://img.shields.io/github/languages/top/carinvid/README Generator?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/carinvid/README Generator?style=flat&logo=appveyor)
   
   Check out the badges hosted by [shields.io](https://shields.io/).
   
@@ -8,7 +8,7 @@
   
   *The what, why, and how:* 
   
-  This will help you to generate a README.md for your repo
+  This will create or generate e README.md file for your repo
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
@@ -20,19 +20,19 @@
   
   *Steps required to install project and how to get the development environment running:*
   
-  NMP install
+  NPM install
   
   ## Usage 
   
   *Instructions and examples for use:*
   
-  node
+  You need to instal depencies
   
   ## Tests
   
   *Tests for application and how to run them:*
   
-  none
+  Node.j and NMP install
   
   ## License
   
