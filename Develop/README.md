@@ -1,4 +1,4 @@
-# How to generate a README.md file;
+# How to create a README.md File;
 
   ![Badge for GitHub repo top language](https://img.shields.io/github/languages/top/carinvid/README Generator?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/carinvid/README Generator?style=flat&logo=appveyor)
   
@@ -6,36 +6,37 @@
    
   ### Description 
   
-  *The What, Why, and How:
-  * 
-  
-  it will create a README.file for you repo
+  *The What, Why, and How:* 
+
+  How to create a README file for your repo
+
   ## Table of Contents
+    * [installation](#installation)
+    * [usage](#usage)
+    * [Contributing](#contributing)
   * [License](#license)
+  * [installation](#installation)
+  * [usage](#usage)
+  * [Contributing](#contributing)
+  * [Tests](#tests)
     
     ## Installation
     
     *Steps required to install project and how to get the development environment running:*
     
-    using NPM
+    NPM install
       
       ## Usage 
       
       *Instructions and examples for use:*
       
-      This will be up to the user
-      
-      ## Tests
-      
-      *Tests for application and how to run them:*
-      
-      none
+      there is no req for this
       
       ## License
       
+      Apache license 2.0
       
-      
-      ---
+      ---------------------------------
       
       ## Questions?
       

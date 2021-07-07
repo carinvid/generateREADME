@@ -110,7 +110,7 @@ const questions = [
   {
     name: "about the Repo",
     type: "input",
-    message: "What does the user need to know about using the rep?",
+    message: "What does the user need to know about using the repo?",
   },
   {
     name: "contribution",

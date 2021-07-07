@@ -3,18 +3,22 @@
 function generateMarkdown(userResponses, userInfo) {
   let tableofContents = `## Table of Contents`;
 
-  // if (userResponses.installation !== "") {
-  //   tableofContents += `* [installation](#installation)`;
-  // }
-  // if (userResponses.usage !== "") {
-  //   tableofContents += `* [usage](#usage)`;
-  // }
-  // if (userResponses.contributing !== "") {
-  //   tableofContents += `* [Contributing](#contributing)`;
-  // }
-  // if (userResponses.tests !== "") {
-  //   tableofContents += `* [Tests](#tests)`;
-  // }
+  if (userResponses.installation !== "") {
+    tableofContents += `
+    * [installation](#installation)`;
+  }
+  if (userResponses.usage !== "") {
+    tableofContents += `
+    * [usage](#usage)`;
+  }
+  if (userResponses.contributing !== "") {
+    tableofContents += `
+    * [Contributing](#contributing)`;
+  }
+  if (userResponses.tests !== "") {
+    tableofContents += `
+    * [Tests](#tests)`;
+  }
 
   let draftMarkdown = `# ${userResponses.title};
 
@@ -24,16 +28,20 @@ function generateMarkdown(userResponses, userInfo) {
    
   ### Description 
   
-  *The What, Why, and How:
-  * 
-  
+  *The What, Why, and How:* 
+
   ${userResponses.description}
+
   `;
 
   draftMarkdown += tableofContents;
 
   draftMarkdown += `
-  * [License](#license)`;
+  * [License](#license)
+  * [installation](#installation)
+  * [usage](#usage)
+  * [Contributing](#contributing)
+  * [Tests](#tests)`;
 
   if (userResponses.installation !== "") {
     draftMarkdown += `
@@ -58,6 +66,7 @@ function generateMarkdown(userResponses, userInfo) {
   // Optional Contributing section
   if (userResponses.contributing !== "") {
     `
+ 
       
       ## Contributing
       
@@ -76,6 +85,7 @@ function generateMarkdown(userResponses, userInfo) {
       
       ${userResponses.tests}`;
   }
+
   // License section is required
   draftMarkdown += `
       
@@ -85,7 +95,7 @@ function generateMarkdown(userResponses, userInfo) {
       `;
 
   let draftoDeveloper = `
-      ---
+      ---------------------------------
       
       ## Questions?
       
@@ -101,6 +111,7 @@ function generateMarkdown(userResponses, userInfo) {
       Email: ${userInfo.email}
       `;
   }
+
   // Add developer section to markdown
   draftMarkdown += draftoDeveloper;
 
