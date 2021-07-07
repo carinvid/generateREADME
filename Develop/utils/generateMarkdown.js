@@ -39,7 +39,9 @@ function generateMarkdown(userResponses, userInfo) {
 
   draftMarkdown += `
   * [License](#license)
- 
+  * [installation](#installation)
+  * [usage](#usage)
+  * [Contributing](#contributing)
   * [Tests](#tests)`;
 
   if (userResponses.installation !== "") {
@@ -55,7 +57,7 @@ function generateMarkdown(userResponses, userInfo) {
   if (userResponses.usage !== "") {
     draftMarkdown += `
       
-      ## Usage 
+  ## Usage 
       
       *Instructions and examples for use:*
       
@@ -67,7 +69,7 @@ function generateMarkdown(userResponses, userInfo) {
     `
  
       
-      ## Contributing
+  ## Contributing
       
       *If you would like to contribute it, you can follow these guidelines for how to do so.*
       
@@ -78,7 +80,7 @@ function generateMarkdown(userResponses, userInfo) {
   if (userResponses.tests !== "") {
     draftMarkdown += `
       
-      ## Tests
+  ## Tests
       
       *Tests for application and how to run them:*
       
@@ -88,7 +90,7 @@ function generateMarkdown(userResponses, userInfo) {
   // License section is required
   draftMarkdown += `
       
-      ## License
+  ## License
       
       ${userResponses.license}
       `;
@@ -96,7 +98,7 @@ function generateMarkdown(userResponses, userInfo) {
   let draftoDeveloper = `
       ---------------------------------
       
-      ## Questions?
+  ## Questions?
       
          
       For any questions, please contact me with the information below:
