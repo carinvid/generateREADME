@@ -39,15 +39,12 @@ function generateMarkdown(userResponses, userInfo) {
 
   draftMarkdown += `
   * [License](#license)
-  * [installation](#installation)
-  * [usage](#usage)
-  * [Contributing](#contributing)
-  * [Tests](#tests)`;
+  `;
 
   if (userResponses.installation !== "") {
     draftMarkdown += `
     
-    ## Installation
+  ## Installation
     
     *Steps required to install project and how to get the development environment running:*
     

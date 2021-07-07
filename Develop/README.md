@@ -1,7 +1,7 @@
 
-  # How to generate a README.md file for your project;
+  # How to generate a README.md file for your repo;
 
-  ![Badge for GitHub repo top language](https://img.shields.io/github/languages/top/carinvid/README.md file?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/carinvid/README.md file?style=flat&logo=appveyor)
+  ![Badge for GitHub repo top language](https://img.shields.io/github/languages/top/carinvid/README Generator?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/carinvid/README Generator?style=flat&logo=appveyor)
   
   Check out the badges hosted by [shields.io](https://shields.io/).
    
@@ -9,7 +9,7 @@
   
   *The What, Why, and How:* 
 
-  It will let you generate a this file for your file
+  This is will create a README.md file for your repo
 
   ## Table of Contents
     * [installation](#installation)
@@ -17,32 +17,29 @@
     * [Contributing](#contributing)
     * [Tests](#tests)
   * [License](#license)
-  * [installation](#installation)
-  * [usage](#usage)
-  * [Contributing](#contributing)
-  * [Tests](#tests)
+  
     
-    ## Installation
+  ## Installation
     
     *Steps required to install project and how to get the development environment running:*
     
-    NMP install
+    NPM install
       
   ## Usage 
       
       *Instructions and examples for use:*
       
-      This will be upto to the user
+      Node.js and MPN
       
   ## Tests
       
       *Tests for application and how to run them:*
       
-      Node.js and NPM was used forthis application
+      Basic knowledge of Node.js
       
   ## License
       
-      Mozilla Public License 2.0
+      Apache license 2.0
       
       ---------------------------------
       
