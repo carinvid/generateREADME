@@ -1,6 +1,6 @@
-# How to generate a README.md file 
+# How to generate a README.md file for your repo
 
-  [![License](https://img.shields.io/github/languages/top/carinvid/README-GENERATOR?style=flat&logo=appveyor)](https://img.shields.io/github/languages/top/carinvid/README-GENERATOR?style=flat&logo=appveyor)
+  [![License](https://img.shields.io/github/languages/top/carinvid/README_GENERATOR?style=flat&logo=appveyor)](https://img.shields.io/github/languages/top/carinvid/README_GENERATOR?style=flat&logo=appveyor)
   
   
   Check out the badges hosted by [shields.io](https://shields.io/).
@@ -10,7 +10,7 @@
   
   *The what, why, and how:* 
   
-  none
+  This will create a readme.md file foru your repo
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
@@ -22,13 +22,13 @@
   
   *Steps required to install project and how to get the development environment running:*
   
-  none
+  NPM install
   
   ## Usage 
   
   *Instructions and examples for use:*
   
-  none
+  None
   
   ## Tests
   
