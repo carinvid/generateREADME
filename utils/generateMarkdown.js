@@ -25,7 +25,9 @@ function generateMarkdown(userResponses, userInfo) {
 
   // Generate markdown for the top required portions of the README
   let draftoMarkdown = `# ${userResponses.title}
-  ![Badge for GitHub repo top language](https://img.shields.io/github/languages/top/${userResponses.username}/${userResponses.repo}?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/${userResponses.username}/${userResponses.repo}?style=flat&logo=appveyor)
+
+  [![License](https://img.shields.io/github/languages/top/${userResponses.username}/${userResponses.repo}?style=flat&logo=appveyor)](https://img.shields.io/github/languages/top/${userResponses.username}/${userResponses.repo}?style=flat&logo=appveyor)
+  
   
   Check out the badges hosted by [shields.io](https://shields.io/).
   
@@ -107,13 +109,14 @@ function generateMarkdown(userResponses, userInfo) {
   For any questions, please contact me with the information below:
  
   GitHub: [@${userInfo.login}](${userInfo.url})
+ 
   `;
 
   // If GitHub email is not null, add to Developer section
-  if (userInfo.email !== null) {
+  if (userResponses.email !== null) {
     draftDev += `
-  Email: ${userInfo.email}
-  `;
+    
+    Email: ${userResponses.email}`;
   }
 
   // Add developer section to markdown

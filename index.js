@@ -3,7 +3,7 @@
 // TODO: Create an array of questions for user input
 const fs = require("fs");
 const inquirer = require("inquirer");
-const { userInfo } = require("os");
+
 const util = require("util");
 const api = require("./utils/api.js");
 const generateMarkdown = require("./utils/generateMarkdown");
@@ -14,8 +14,8 @@ const questions = [
     name: "username",
     type: "input",
     message: "What is your Github username? (Require)",
-    validate: (nameInput) => {
-      if (nameInput) {
+    validate: (answer) => {
+      if (answer) {
         return true;
       } else {
         console.log("Please enter your Github name!");
@@ -25,11 +25,11 @@ const questions = [
   },
 
   {
-    name: "contact",
+    name: "email",
     type: "input",
     message: "What is your email address? (Require)",
-    validate: (nameInput) => {
-      if (nameInput) {
+    validate: (answer) => {
+      if (answer) {
         return true;
       } else {
         console.log("Please enter your email address!");
@@ -77,7 +77,7 @@ const questions = [
   },
   {
     name: "license",
-    type: "checkbox",
+    type: "list",
     message: "Please choice the type of your license :(Require)",
     choices: [
       "Apache license 2.0",
