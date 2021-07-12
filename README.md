@@ -17,3 +17,5 @@ The application itself can be invoked with node index.js.
 
 Usage
 Instructions and examples for use:
+
+https://user-images.githubusercontent.com/17866063/125228143-871ea580-e291-11eb-8b15-adf5cfb4a531.mp4
