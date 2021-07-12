@@ -1,4 +1,4 @@
-README.md Generator: Node.js and ES6+
+*****README.md Generator: Node.js and ES6+******
 
 Description
 The what, why, and how:
@@ -19,3 +19,5 @@ Usage
 Instructions and examples for use:
 
 https://user-images.githubusercontent.com/17866063/125228143-871ea580-e291-11eb-8b15-adf5cfb4a531.mp4
+
+CREATED BY CAROLINA REEDY
